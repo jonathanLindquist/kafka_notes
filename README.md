@@ -2,12 +2,22 @@
 
 ## Docs
 
-In order to have the Kafka scripts on your env $PATH, `brew install kafka` should automatically add them. [Here](https://access.redhat.com/documentation/en-us/red_hat_openshift_streams_for_apache_kafka/1/topic/015379fc-1863-4ba0-b224-a8b92b57efe1) is a link to explaining where they are places.
+In order to have the Kafka scripts on your env $PATH, `brew install kafka` should automatically add them. [Here](https://access.redhat.com/documentation/en-us/red_hat_openshift_streams_for_apache_kafka/1/topic/015379fc-1863-4ba0-b224-a8b92b57efe1) is a link to explaining where they are places. 
+
+Another resource is [Apache Kafka](https://kafka.apache.org/quickstart)
 
 Confluence has a basic starting guide on commands and usages [here](https://docs.confluent.io/kafka/operations-tools/kafka-tools.html), you just won't need the `.sh` after since the names will be on your $PATH.
 
 ## Basic cmds
 
+### Get Version
+
 ```sh
 kafka-broker-api-versions --bootstrap-server <host>:<port> --version
+```
+
+### Create topic
+
+```sh
+kafka-topics --create --topic <topic-name> --bootstrap-server <host>:<port>
 ```
